@@ -13,9 +13,9 @@ Province::Province(const ProvinceData& doc)
 	}
 }
 
-void Province::addProducer(const Producer& producer) 
+void Province::addProducer(Producer&& producer) 
 {
-	_producers.push_back(std::move(producer));
+	_producers.push_back(producer);
 	_totalProduction += producer.production();
 }
 
@@ -24,7 +24,8 @@ const std::string Province::name() const
 	return _name;
 }
 
-const std::vector<Producer> Province::producers() const
+
+std::vector<Producer>& Province::producers()
 {
 	return _producers;
 }

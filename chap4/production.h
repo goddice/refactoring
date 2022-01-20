@@ -30,9 +30,9 @@ class Province
 {
 public:
 	Province(const ProvinceData& doc);
-	void addProducer(const Producer& producer);
+	void addProducer(Producer&& producer);
 	const std::string name() const;
-	const std::vector<Producer> producers() const;
+	std::vector<Producer>& producers();
 	const int totalProduction() const;
 	void setTotalProduction(int aTotalProduction);
 	const int demand() const;
