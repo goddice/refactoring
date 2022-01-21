@@ -1,2 +1,2 @@
 # refactoring
-C++ demo code for the Refactoring book.
+C++ demo code for the *Refactoring* book.
