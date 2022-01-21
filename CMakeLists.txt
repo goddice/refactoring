@@ -10,7 +10,9 @@ set(CMAKE_CXX_STANDARD 20)
 add_subdirectory("thirdparty/Catch2")
 
 # Add third party header libs
-set(THIRDPARTY_PATH "${CMAKE_SOURCE_DIR}/thirdparty")
+set(THIRDPARTY_PATH 
+	"${CMAKE_SOURCE_DIR}/thirdparty/nlohmann/single_include"
+)
 include_directories(${THIRDPARTY_PATH})
 
 message(${CMAKE_BINARY_DIR})
